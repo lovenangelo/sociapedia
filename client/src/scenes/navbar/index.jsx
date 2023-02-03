@@ -30,7 +30,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state) => state.user);
-  const isNonMobileScreens = useMediaQuery("(min-width: 100px)");
+  const isNonMobileScreens = useMediaQuery("(min-width: 768px)");
 
   const theme = useTheme();
   const neutralLight = theme.palette.neutral.light;
@@ -39,7 +39,8 @@ const Navbar = () => {
   const primaryLight = theme.palette.primary.default;
   const alt = theme.palette.background.alt;
 
-  const fullName = `${user.firstName} ${user.lastName}`;
+  // const fullName = `${user.firstName} ${user.lastName}`;
+  const fullName = "Loven Angelo Dayola";
 
   return (
     <FlexBetween padding="1rem 6%" backgroundColor={alt}>

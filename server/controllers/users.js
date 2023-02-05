@@ -4,7 +4,7 @@ import User from "../models/User.js";
 export const getUser = async (req, res) => {
   try {
     const { id } = req.params;
-    const user = await User.findById(id);
+    const user = await User.findById(id).exec();
     res.status(200).send(user);
   } catch (error) {
     res.status(404).json({ message: error.message });
